@@ -2,7 +2,7 @@
     {
         "level": "critical",
         "id": "cve-2025-8472-auth-bypass",
-        "title": "Critical Authentication Bypass in JWT Token Verification",
+        "title": "Authentication Bypass in JWT Verification",
         "body": "CVE-2025-8472: Improperly validated JWT tokens in authentication middleware allow attackers to forge tokens and bypass authentication. Affects all apps using usernameAndPassword, Google, or GitHub OAuth. Upgrade to 0.16.8 immediately.",
         "publishedAt": "2025-10-22T14:30:00.000Z",
         "waspVersionsAffected": ">=0.13.0 <0.16.8"
@@ -10,7 +10,7 @@
     {
         "level": "high",
         "id": "cve-2025-8473-prisma-injection",
-        "title": "SQL Injection Risk in Custom Prisma Setup Functions",
+        "title": "SQL Injection in Prisma Setup Functions",
         "body": "CVE-2025-8473: Apps using custom prismaSetupFn or database seed functions with raw SQL queries are vulnerable to SQL injection if user input is not sanitized. Upgrade to 0.16.8 and review all custom database functions.",
         "publishedAt": "2025-10-21T10:15:00.000Z",
         "waspVersionsAffected": ">=0.14.0 <0.16.8"
