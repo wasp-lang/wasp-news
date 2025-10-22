@@ -1,6 +1,7 @@
 [
     {
         "level": "critical",
+        "id": "test-critical",
         "title": "Test",
         "body": "This is a body.",
         "publishedAt": "2025-10-22T19:30:45.123Z",
@@ -8,15 +9,17 @@
     },
     {
         "level": "high",
+        "id": "test-high",
         "title": "Test high",
         "body": "This is a high body.",
         "publishedAt": "2025-10-21T19:30:45.123Z",
-        "waspVersionsAffected": "*"
+        "waspVersionsAffected": "0.16.x"
     },
     {
-        "level": "high",
-        "title": "Test high",
-        "body": "This is a high body.",
+        "level": "moderate",
+        "id": "test-moderate",
+        "title": "Test moderate",
+        "body": "This is a moderate body.",
         "publishedAt": "2025-10-21T19:30:45.123Z",
         "waspVersionsAffected": "*"
     }
