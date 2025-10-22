@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import news from './news.json';
+import news from './news.json' with { type: "json" };
 
 const app = express();
 const PORT = process.env.PORT || 3000;
