@@ -16,28 +16,12 @@
         "waspVersionsAffected": ">=0.14.0 <0.16.8"
     },
     {
-        "level": "high",
-        "id": "wasp-0-17-release",
-        "title": "Wasp 0.17.0 Released",
-        "body": "Major release with improved authentication flow, enhanced Prisma integration with type-safe queries, new database seeding API, and support for custom Prisma client extensions. Includes security patches for CVE-2025-8472 and CVE-2025-8473. Breaking changes require schema migrations.",
-        "publishedAt": "2025-10-20T16:00:00.000Z",
-        "waspVersionsAffected": "*"
-    },
-    {
         "level": "moderate",
         "id": "wasp-0-16-8-patch",
         "title": "Wasp 0.16.8 Patch Released",
         "body": "Security patch with strengthened JWT validation, improved auth input sanitization, and better environment variable isolation. Drop-in replacement for 0.16.x with no breaking changes. Update with 'npm install -g wasp'.",
         "publishedAt": "2025-10-22T18:00:00.000Z",
         "waspVersionsAffected": ">=0.16.0 <0.16.8"
-    },
-    {
-        "level": "low",
-        "id": "prisma-postgres-migration-guide",
-        "title": "Guide: Migrating from SQLite to PostgreSQL",
-        "body": "New migration guide available for transitioning from SQLite to PostgreSQL. Covers AUTOINCREMENT syntax issues (Error P3018), proper use of SERIAL types, and deployment best practices for Heroku and other platforms.",
-        "publishedAt": "2025-10-18T11:45:00.000Z",
-        "waspVersionsAffected": "*"
     },
     {
         "level": "low",
