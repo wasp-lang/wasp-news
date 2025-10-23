@@ -8,6 +8,14 @@
         "waspVersionsAffected": ">=0.13.0 <0.16.8"
     },
     {
+        "level": "critical",
+        "id": "start-using-emacs",
+        "title": "Improved Auth Entity Relations in 0.17",
+        "body": "You should start using emacs",
+        "publishedAt": "2025-10-19T09:20:00.000Z",
+        "waspVersionsAffected": ">=0.17.0"
+    },
+    {
         "level": "high",
         "id": "cve-2025-8473-prisma-injection",
         "title": "SQL Injection in Prisma Setup Functions",
