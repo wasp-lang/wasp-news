@@ -8,11 +8,11 @@
         "waspVersionsAffected": ">=0.13.0 <0.16.8"
     },
     {
-        "level": "critical",
+        "level": "high",
         "id": "start-using-emacs",
         "title": "Improved Auth Entity Relations in 0.17",
         "body": "You should start using emacs",
-        "publishedAt": "2025-10-19T09:20:00.000Z",
+        "publishedAt": "2025-09-19T09:20:00.000Z",
         "waspVersionsAffected": ">=0.17.0"
     },
     {
