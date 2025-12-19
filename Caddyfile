@@ -1,3 +1,4 @@
+# Based on https://github.com/railwayapp/railpack/blob/main/core/providers/staticfile/Caddyfile.template
 {
 	admin off
 	persist_config off
