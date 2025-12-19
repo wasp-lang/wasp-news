@@ -1,6 +1,6 @@
 [
     {
-        "level": "high",
+        "level": "x",
         "id": "cve-2025-8472-auth-bypass",
         "title": "Authentication Bypass in JWT Verification",
         "body": "CVE-2025-8472: Improperly validated JWT tokens in authentication middleware allow attackers to forge tokens and bypass authentication. Affects all apps using usernameAndPassword, Google, or GitHub OAuth. Upgrade to 0.16.8 immediately.",
