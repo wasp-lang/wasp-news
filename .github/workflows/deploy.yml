@@ -1,0 +1,16 @@
+name: Deploy to Railway
+
+on:
+  push:
+    branches: [railway-deploy]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    container: ghcr.io/railwayapp/cli:latest
+    env:
+      WASP_NEWS_SERVICE_ID: f3377710-df69-4101-b1d3-f9119fe5a45d
+      RAILWAY_TOKEN: ${{ secrets.RAILWAY_PROJECT_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - run: railway up --service=${{ env.WASP_NEWS_SERVICE_ID }}
