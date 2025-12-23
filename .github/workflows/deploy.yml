@@ -3,15 +3,29 @@ name: Deploy to Railway
 
 on:
   push:
-    branches: [main]
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+      - run: npm install
+        working-directory: scripts
+      - run: node validate-news-format.js
+        working-directory: scripts
+
   deploy:
+    # Deploy only on main branch
+    if: github.ref == 'refs/heads/main'
+    needs: validate
     runs-on: ubuntu-latest
     container: ghcr.io/railwayapp/cli:latest
     env:
       WASP_NEWS_SERVICE_ID: f3377710-df69-4101-b1d3-f9119fe5a45d
       RAILWAY_TOKEN: ${{ secrets.RAILWAY_PROJECT_TOKEN }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - run: railway up --service=${{ env.WASP_NEWS_SERVICE_ID }}
