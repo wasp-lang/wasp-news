@@ -3,7 +3,6 @@ name: Deploy to Railway
 
 on:
   push:
-    branches: [main]
 
 jobs:
   validate:
@@ -19,6 +18,8 @@ jobs:
         working-directory: scripts
 
   deploy:
+    # Deploy only on main branch
+    if: github.ref == 'refs/heads/main'
     needs: validate
     runs-on: ubuntu-latest
     container: ghcr.io/railwayapp/cli:latest
