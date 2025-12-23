@@ -28,7 +28,7 @@
 		-Server
 	}
 
-	# Serve ./public/news.json at /
+	# Serve news JSON file at /
 	route / {
 		header Content-Type application/json
 		file_server {
