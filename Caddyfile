@@ -1,0 +1,39 @@
+# Based on https://github.com/railwayapp/railpack/blob/main/core/providers/staticfile/Caddyfile.template
+{
+	admin off
+	persist_config off
+	auto_https off
+
+	log {
+		format json
+	}
+
+	servers {
+		trusted_proxies static private_ranges
+	}
+}
+
+:{$PORT:80} {
+	log {
+		format json
+	}
+
+	respond /health 200
+
+	# Security headers
+	header {
+		# Prevent MIME-sniffing
+		X-Content-Type-Options "nosniff"
+		# Don't expose we use Caddy
+		-Server
+	}
+
+	# Serve news JSON file at /
+	route / {
+		header Content-Type application/json
+		file_server {
+			root {{.STATIC_FILE_ROOT}}
+			index news.json
+		}
+	}
+}
