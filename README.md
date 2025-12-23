@@ -4,7 +4,7 @@ Server part for the Wasp News feature. The `./public/news.json` contents is serv
 
 ### Editing the list of news
 
-1, You edit the list of news by editing the `./public/news.json` file.
+1. You edit the list of news by editing the `./public/news.json` file.
 2. Create a PR, the CI will validate the JSON
 against the [Zod schema](https://github.com/wasp-lang/wasp-news/blob/main/scripts/validate-news-format.js#L6).
 3. Once you merge to `main`, the changes will be automatically deployed.
