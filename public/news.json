@@ -1,42 +1,37 @@
 [
-    {
-        "level": "high",
-        "id": "cve-2025-8472-auth-bypass",
-        "title": "Authentication Bypass in JWT Verification",
-        "body": "CVE-2025-8472: Improperly validated JWT tokens in authentication middleware allow attackers to forge tokens and bypass authentication. Affects all apps using usernameAndPassword, Google, or GitHub OAuth. Upgrade to 0.16.8 immediately.",
-        "publishedAt": "2025-10-22T14:30:00.000Z",
-        "waspVersionsAffected": ">=0.13.0 <0.16.8"
-    },
-    {
-        "level": "high",
-        "id": "start-using-emacs",
-        "title": "Improved Auth Entity Relations in 0.17",
-        "body": "You should start using emacs",
-        "publishedAt": "2025-09-19T09:20:00.000Z",
-        "waspVersionsAffected": ">=0.17.0"
-    },
-    {
-        "level": "high",
-        "id": "cve-2025-8473-prisma-injection",
-        "title": "SQL Injection in Prisma Setup Functions",
-        "body": "CVE-2025-8473: Apps using custom prismaSetupFn or database seed functions with raw SQL queries are vulnerable to SQL injection if user input is not sanitized. Upgrade to 0.16.8 and review all custom database functions.",
-        "publishedAt": "2025-10-21T10:15:00.000Z",
-        "waspVersionsAffected": ">=0.14.0 <0.16.8"
-    },
-    {
-        "level": "moderate",
-        "id": "wasp-0-16-8-patch",
-        "title": "Wasp 0.16.8 Patch Released",
-        "body": "Security patch with strengthened JWT validation, improved auth input sanitization, and better environment variable isolation. Drop-in replacement for 0.16.x with no breaking changes. Update with 'npm install -g wasp'.",
-        "publishedAt": "2025-10-22T18:00:00.000Z",
-        "waspVersionsAffected": ">=0.16.0 <0.16.8"
-    },
-    {
-        "level": "low",
-        "id": "auth-entity-improvements",
-        "title": "Improved Auth Entity Relations in 0.17",
-        "body": "Version 0.17 introduces better auth entity structure with cleaner User model relations and improved type safety for authentication providers. The sanitizeAndSerializeProviderData API now supports async operations for enhanced password hashing.",
-        "publishedAt": "2025-10-19T09:20:00.000Z",
-        "waspVersionsAffected": ">=0.17.0"
-    }
+  {
+    "level": "critical",
+    "id": "cve-2025-8472-auth-bypass",
+    "title": "Authentication Bypass in JWT Verification",
+    "body": "CVE-2025-8472: Improperly validated JWT tokens in authentication middleware allow attackers to forge tokens and bypass authentication. Affects all apps using usernameAndPassword, Google, or GitHub OAuth. Upgrade to 0.16.8 immediately.",
+    "publishedAt": "2025-10-22T14:30:00.000Z"
+  },
+  {
+    "level": "critical",
+    "id": "start-using-emacs",
+    "title": "Improved Auth Entity Relations in 0.17",
+    "body": "You should start using emacs",
+    "publishedAt": "2025-09-19T09:20:00.000Z"
+  },
+  {
+    "level": "critical",
+    "id": "cve-2025-8473-prisma-injection",
+    "title": "SQL Injection in Prisma Setup Functions",
+    "body": "CVE-2025-8473: Apps using custom prismaSetupFn or database seed functions with raw SQL queries are vulnerable to SQL injection if user input is not sanitized. Upgrade to 0.16.8 and review all custom database functions.",
+    "publishedAt": "2025-10-21T10:15:00.000Z"
+  },
+  {
+    "level": "important",
+    "id": "wasp-0-16-8-patch",
+    "title": "Wasp 0.16.8 Patch Released",
+    "body": "Security patch with strengthened JWT validation, improved auth input sanitization, and better environment variable isolation. Drop-in replacement for 0.16.x with no breaking changes. Update with 'npm install -g wasp'.",
+    "publishedAt": "2025-10-22T18:00:00.000Z"
+  },
+  {
+    "level": "info",
+    "id": "auth-entity-improvements",
+    "title": "Improved Auth Entity Relations in 0.17",
+    "body": "Version 0.17 introduces better auth entity structure with cleaner User model relations and improved type safety for authentication providers. The sanitizeAndSerializeProviderData API now supports async operations for enhanced password hashing.",
+    "publishedAt": "2025-10-19T09:20:00.000Z"
+  }
 ]

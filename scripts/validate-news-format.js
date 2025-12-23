@@ -1,17 +1,20 @@
+import { readFile } from "node:fs/promises";
 import { z } from "zod";
-import { readFile } from "fs/promises";
 
-const newsItemSchema = z.object({
-  level: z.enum(["high", "moderate", "low"]),
+// If you are updating the schema here, make sure to update the
+// types in `Wasp.Cli.Command.News.Core` in `wasp-lang/wasp` repo.
+const newsItemSchema = z.strictObject({
   id: z.string(),
-  title: z.string(),
+  // Title max length is related to the max line length of 80, for details
+  // check the `Wasp.Cli.Command.News.Display` module in `wasp-lang/wasp` repo.
+  title: z.string().max(60),
   body: z.string(),
+  level: z.enum(["critical", "important", "info"]),
   publishedAt: z.iso.datetime(),
-  waspVersionsAffected: z.string(),
 });
 const newsSchema = z.array(newsItemSchema);
 
-const newsJsonPath = new URL("../news.json", import.meta.url);
+const newsJsonPath = new URL("../public/news.json", import.meta.url);
 const newsData = JSON.parse(await readFile(newsJsonPath, "utf-8"));
 try {
   newsSchema.parse(newsData);
