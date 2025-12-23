@@ -3,7 +3,7 @@ name: Deploy to Railway
 
 on:
   push:
-    branches: [main]
+    branches: [main, railway-deploy]
 
 jobs:
   deploy:
