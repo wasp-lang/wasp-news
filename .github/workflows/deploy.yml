@@ -3,7 +3,7 @@ name: Deploy to Railway
 
 on:
   push:
-    branches: [main, validate-news-json]
+    branches: [main]
 
 jobs:
   validate:
