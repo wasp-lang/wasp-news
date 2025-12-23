@@ -31,6 +31,8 @@
 	# Serve news JSON file at /
 	route / {
 		header Content-Type application/json
+		# Asks CDN to cache the response for 60 seconds
+		header Cache-Control "public, max-age=0, s-maxage=60, must-revalidate"
 		file_server {
 			root {{.STATIC_FILE_ROOT}}
 			index news.json
