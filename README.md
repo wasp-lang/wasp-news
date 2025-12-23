@@ -11,10 +11,13 @@ against the [Zod schema](https://github.com/wasp-lang/wasp-news/blob/main/script
 
 ### CI/CD details
 
-On each push, the news JSON file is validated using the [Zod schema](https://github.com/wasp-lang/wasp-news/blob/main/scripts/validate-news-format.js#L6). The server is deployed using a Railway project token on push to the `main` branch.
-
-The server is deployed to Railway ([link to project](https://railway.com/project/91b4f786-8635-40e9-89b5-7263022011ee)). We use Railpack to serve this as a static site. We modified the [`Caddyfile`](https://railpack.com/languages/staticfile#custom-caddyfile) to serve `./public/news.json` at the root path.
+- On each push, the news JSON file is validated using the [Zod schema](https://github.com/wasp-lang/wasp-news/blob/main/scripts/validate-news-format.js#L6).
+- The server is deployed using a Railway project token on push to the `main` branch.
 
 ### Deployment details
 
-The server is deployed as a Caddy server that serves the JSON file at `/`. The response include cache control headers which tell Cloudflare for how long to cache the response. Cloudflare is configured to cache the JSON response using a custom `Cache Rule`.
+- The server is deployed to Railway ([link to project](https://railway.com/project/91b4f786-8635-40e9-89b5-7263022011ee)).
+  - We use Railpack to serve this as a static site.
+  - We modified the [`Caddyfile`](https://railpack.com/languages/staticfile#custom-caddyfile) to serve `./public/news.json` at the root path.
+- We added cache control headers which tell Cloudflare for how long to cache the response.
+- Cloudflare is configured to cache the JSON response using a custom `Cache Rule`.
