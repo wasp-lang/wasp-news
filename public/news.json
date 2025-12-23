@@ -4,7 +4,6 @@
     "id": "wasp-news-welcome",
     "title": "Welcome to Wasp News!",
     "body": "Run `wasp news` to get up to date with latest Wasp announcements and releases. If there's something really important you must know about (for example, a security vulnerability in your Wasp version), Wasp will tell you about it during `wasp start`.",
-    "publishedAt": "2025-12-23T14:47:38.377Z",
-    "waspVersionsAffected": "*"
+    "publishedAt": "2025-12-23T14:47:38.377Z"
   }
 ]
