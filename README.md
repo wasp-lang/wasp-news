@@ -1,6 +1,8 @@
 # Wasp News
 
-Server part for the Wasp News feature. The `./public/news.json` contents is served on https://news.wasp.sh
+This repo serves as a "backend" for the `wasp news` command
+
+Server part for the Wasp News feature. The `./public/news.json` contents is served on https://news.wasp.sh. [The Wasp CLI](https://github.com/wasp-lang/wasp/blob/main/waspc/cli/src/Wasp/Cli/Command/News.hs) then fetches this file and displays the news to the user.
 
 ### Editing the list of news
 
