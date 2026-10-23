@@ -1,5 +1,12 @@
 [
   {
+    "level": "important",
+    "id": "wasp-0-26-1-node-security-update",
+    "title": "Security: upgrade to Node.js 24.22.1",
+    "body": "Security vulnerabilities were recently discovered in Node.js 24, including a remote code execution bug in its Brotli decoder. This is an issue in Node.js itself, not in Wasp. Node.js 24.22.1 fixes them, and we recommend upgrading Node.js for all your apps as soon as possible. You can keep your current Wasp version, but if you deploy with the Dockerfile Wasp generates, upgrade to Wasp 0.26.1 too, since it moves your server image to the patched Node.js. More info: https://wasp.sh/docs/0.26/migration-guide#upgrade-nodejs",
+    "publishedAt": "2026-10-23T10:24:10.000Z"
+  },
+  {
     "level": "info",
     "id": "wasp-news-welcome",
     "title": "Welcome to Wasp News!",
