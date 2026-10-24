@@ -20,7 +20,7 @@ against the [Zod schema](https://github.com/wasp-lang/wasp-news/blob/main/script
 ### Deployment details
 
 - The server is deployed to Railway ([link to project](https://railway.com/project/91b4f786-8635-40e9-89b5-7263022011ee)).
-  - We use Railpack to serve this as a static site.
-  - We modified the [`Caddyfile`](https://railpack.com/languages/staticfile#custom-caddyfile) to serve `./public/news.json` at the root path.
+  - Railway builds the `Dockerfile`, which runs the official Caddy image.
+  - The `Caddyfile` serves `./public/news.json` at the root path.
 - We added cache control headers which tell Cloudflare for how long to cache the response.
 - Cloudflare is configured to cache the JSON response using a custom `Cache Rule`.
